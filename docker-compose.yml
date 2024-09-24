@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  bot_service:
+    build: ./src/services/bot_service
+    environment:
+      # - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    ports:
+      - "8000:8000"
+    # depends_on:
+    #   - nlp_service
+    #   - db_service
+
+  nlp_service:
+    build: ./src/services/nlp_service
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}  # Passando a chave de API para o NLP Service
+    ports:
+      - "8002:8002"
