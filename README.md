@@ -7,7 +7,7 @@
  - ### Gemini
  - ### FastAPI 
  - ### Docker
- - ### Chatbot Telegra
+ - ### Chatbot Telegram
 
 ## MICROSSERVIÇOS
  - ### Chatbot
